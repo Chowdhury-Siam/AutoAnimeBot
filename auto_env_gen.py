@@ -56,7 +56,7 @@ async def create_channel(client, title):
         r = await client(
             CreateChannelRequest(
                 title=title,
-                about="Made By https://github.com/kaif-00z/AutoAnimeBot",
+                about="Made By Siam Chowdhury",
                 megagroup=False,
             )
         )
@@ -71,7 +71,7 @@ async def create_channel(client, title):
 def generate_env():
     txt = ENV.format(
         DATA["bot_token"],
-        DATA["Ongoing Anime 2023"],
+        DATA["Ongoing Anime"],
         DATA["Ongoing Anime Logs"],
         DATA["Ongoing Anime Samples And SS"],
         DATA.get("redis_uri") or "",
@@ -134,7 +134,7 @@ async def auto_maker():
         print("Creating Channels...")
         for ch_name in [
             "Ongoing Anime Logs",
-            "Ongoing Anime 2023",
+            "Ongoing Anime",
             "Ongoing Anime Samples And SS",
         ]:
             try:
